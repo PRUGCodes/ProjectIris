@@ -1,1 +1,6 @@
-<p>{{rndpost.submission_text}}
+<p>{{submission_text}}</p>
+<form action="/submissions/reportpost/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="REPORT IF NOT NICE!">
+</form>

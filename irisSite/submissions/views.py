@@ -1,3 +1,4 @@
+from .forms import reportform
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
@@ -40,7 +41,24 @@ def randompost(request):
                 new_submission.reported = False
                 randomsubmission = getRandomSubmission(Submission.objects.count())
             new_submission.save()
+            reportForm = reportform()
+            randomsubmission_text = randomsubmission.submission_text
+            reportForm.sub_id = randomsubmission_text
             
-            return render(request, 'submissions/randompost.html', {'rndpost': randomsubmission})
+            if (Submission.objects.filter(reported=False).count() >= 10):
+                randomsubmission.delete()
+            
+            return render(request, 'submissions/randompost.html', {'submission_text': randomsubmission_text, 'form': reportForm})
+    else:
+        return redirect('index')
+
+def reportpost(request):
+    if request.method == 'POST':
+        submission = reportform(request.POST)
+        if submission.is_valid():
+            submissionObj = Submission.objects.filter(submission_text__startswith=submission.sub_id)
+            submissionObj.reported = True
+            return HttpResponse("Reported Thank You!")
+        return HttpResponse("Something went wrong!")
     else:
         return redirect('index')

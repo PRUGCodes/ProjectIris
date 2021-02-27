@@ -25,7 +25,7 @@ SECRET_KEY = 'q)*2c!2@xh-#e(-busg&59@g4x#vj$3lq=ch+mnx+#)5m=17p2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://hmorin.pythonanywhere.com/']
 
 
 # Application definition
