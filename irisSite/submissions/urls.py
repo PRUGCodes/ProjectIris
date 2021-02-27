@@ -6,4 +6,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('randompost/', views.randompost, name='randompost'),
 ]
