@@ -4,7 +4,7 @@
 
 For our AngelHacks 2.0 project "Notes of Kindness," we decided to create a django-based web-application dedicated to spreading kindness to our users.
 
-Our (awesome)site allows users to input a kind message to an anonymous receiver, and once sent, they will receive an anonymous kind message in return!
+Our (awesome) site allows users to input a kind message to an anonymous receiver, and once sent, they will receive an anonymous kind message in return!
 
 ### How do _I_ submit a kind note?!
 
