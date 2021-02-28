@@ -22,14 +22,15 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
-
+.transparent {
+	opacity: 0.3;
+}
 .squares li{
+	
+	background-image: url("images/heart.svg");
     position: absolute;
-    display: block;
+    display: flex;
     list-style: none;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
     
