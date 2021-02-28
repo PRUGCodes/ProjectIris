@@ -1,0 +1,5 @@
+<form action="/submissions/randompost/" method="post">
+    {% csrf_token %}
+    {{ form.submission_text }}
+    <input type="submit" value="Submit">
+</form>
