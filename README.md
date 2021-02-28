@@ -8,11 +8,11 @@ Our (awesome)site allows users to input a kind message to an anonymous receiver,
 
 ### How do _I_ submit a kind note?!
 
-All you have to do is go to our [website](http://notesofkindness.hmorin.com) and write your own positive note for someone else to read! <br/>
+All you have to do is go to our [website](http://notesofkindness.hmorin.com) and write your own positive note for someone else to read! <br/><br/>
 
 ### What if someone uses profane language in their message? :(
 
-It's ok! By utilizing python's _better_profanity_ library, our app can determine whether or not a message includes negative words and deletes it before it can reach anyone. <br/>
+It's ok! By utilizing python's _better_profanity_ library, our app can determine whether or not a message includes negative words and deletes it before it can reach anyone. <br/><br/>
 
 
 ### Won't I get repeated messages? 
