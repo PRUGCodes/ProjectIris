@@ -48,7 +48,7 @@ def randompost(request):
             if (Submission.objects.filter(reported=False).count() >= 10):
                 randomsubmission.delete()
             
-            return render(request, 'submissions/randompost.html', {'submission_text': randomsubmission_text, 'form': reportForm})
+            return render(request, 'submissions/result.html', {'submission_text': randomsubmission_text, 'form': reportForm})
     else:
         return redirect('index')
 
